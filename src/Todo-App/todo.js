@@ -75,7 +75,43 @@ function TodoApp() {
       setTodos(newTodos);
     }
   };
-  
+  //  INPUT //
+//   const editTodo = index => {
+//   const newTodos = [...todos];
+//   const todo = newTodos[index];
+//   const newTodoText = prompt("Enter new todo text", todo.text);
+//   if (newTodoText !== null) {
+//     const newTodo = { ...todo, text: newTodoText };
+//     newTodos.splice(index, 1, newTodo);
+//     setTodos(newTodos);
+//   }
+//   // Create an input element with the new todo text
+//   const input = document.createElement('input');
+//   input.type = 'text';
+//   input.value = newTodoText;
+//   // Replace the todo text span with the input element
+//   const todoElement = document.querySelectorAll('.todo')[index];
+//   const todoText = todoElement.querySelector('span');
+//   todoElement.replaceChild(input, todoText);
+//   // Set the focus to the input field
+//   input.focus();
+//   // Add an event listener to save the changes when the user presses Enter
+//   input.addEventListener('keydown', e => {
+//     if (e.key === 'Enter') {
+//       const editedTodoText = input.value;
+//       const editedTodo = { ...todo, text: editedTodoText };
+//       const editedTodos = [...todos];
+//       editedTodos.splice(index, 1, editedTodo);
+//       setTodos(editedTodos);
+//       // Replace the input element with the updated todo text span
+//       const updatedTodoElement = document.querySelectorAll('.todo')[index];
+//       const updatedTodoText = document.createElement('span');
+//       updatedTodoText.innerText = editedTodoText;
+//       updatedTodoElement.replaceChild(updatedTodoText, input);
+//     }
+//   });
+// };
+
   return (
     <div className="app">
       <div className="container">
