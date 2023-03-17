@@ -60,12 +60,22 @@ function TodoApp() {
     setTodos(newTodos);
   };
 
+//   const editTodo = index => {
+//     // <input type= 'text ' value = {[...todos]}></input>
+// //    <input type= 'text'></input>
+//    prompt("yiudyuiedy",[todos])
+//     // const newTodos = [...todos];
+//   };
   const editTodo = index => {
-    // <input type= 'text ' value = {[...todos]}></input>
-//    <input type= 'text'></input>
-   prompt("yiudyuiedy",[todos])
-    // const newTodos = [...todos];
+    const newTodos = [...todos];
+    const todo = newTodos[index];
+    const newText = prompt("Edit todo", todo.text);
+    if (newText !== null) {
+      newTodos[index] = { ...todo, text: newText };
+      setTodos(newTodos);
+    }
   };
+  
   return (
     <div className="app">
       <div className="container">
